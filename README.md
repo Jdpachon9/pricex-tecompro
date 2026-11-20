@@ -16,7 +16,10 @@ Este repositorio cuenta la historia de dos productos que llevé al mercado y de 
 
 Recreación animada y sin sonido, con la estructura de un pitch para cada empresa: problema, solución, ingresos, etapa, dificultad y aprendizaje.
 
-<!-- VIDEO: en github.com edita este archivo, borra esta línea y arrastra aquí PriceX_Tecompro_pitch.mp4. GitHub lo sube y pone el reproductor en su lugar. -->
+
+
+https://github.com/user-attachments/assets/ab1add81-5beb-4a02-b98b-78568531993a
+
 
 ---
 
@@ -121,7 +124,11 @@ Llegamos temprano: en 2019 casi nadie en Colombia pagaba con QR, y hoy, con Bre-
 
 **Entrevista del programa (2020).** Cuatro minutos sobre por qué decidí emprender, cómo surgió Tecompro.co, qué esperaba de ella, cómo viví el programa y qué le recomiendo a quien quiere emprender. Video de la Universidad Sergio Arboleda, publicado en su Instagram (@lasergioemprende).
 
-<!-- VIDEO-ENTREVISTA: en github.com edita este archivo, borra esta línea y arrastra aquí entrevista-sergio-arboleda.mp4. GitHub lo sube y pone el reproductor en su lugar. -->
+
+
+https://github.com/user-attachments/assets/a47a38f1-cfea-4138-8373-12db0c4233d9
+
+
 
 *Las cifras de Tecompro son aproximadas: los registros de la operación no se conservaron. Los precios del video son de ejemplo, salvo los de la tienda de Pinguagua.*
 
