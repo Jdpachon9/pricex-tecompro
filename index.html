@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>De PriceX a Tecompro.co</title>
+<meta name="description" content="Caso de producto de Juan David Pachón Moya: PriceX y Tecompro.co, dos emprendimientos digitales para el comercio colombiano (2018-2024).">
+<meta property="og:title" content="De PriceX a Tecompro.co">
+<meta property="og:description" content="Dos emprendimientos digitales para el comercio colombiano: problema, solución, ingresos, etapa, dificultad y aprendizaje, con un video de 2 minutos.">
+<meta property="og:type" content="article">
+<meta name="theme-color" content="#F7F7F2">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230F4C5C'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='28' font-weight='700' text-anchor='middle' fill='%23ffffff'%3EJP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap">
+<style>
+:root {
+  /* Plan: el papel neutro del video como base; cada empresa entra con su barra y su color, como en el video;
+     un solo panel oscuro, el del riesgo de PriceX, concentra el contraste de la página. */
+  --bg: #F7F7F2;
+  --surface: #FFFFFF;
+  --ink: #1E2B30;
+  --teal: #0F4C5C;
+  --muted: #5C6B73;
+  --line: #DADDD6;
+  --risk: #E36414;
+  --px: #7A1FE0;
+  --px-bar: #8D1CF4;
+  --tc: #1A44A8;
+  --tc-bar: #2046A9;
+  --night: #16272D;
+  --night-line: rgba(255, 255, 255, 0.14);
+  --on-night: #E6ECEE;
+  --on-night-muted: #A7B6BC;
+  --on-night-strong: #FFFFFF;
+  --px-night: #B78BFF;
+  --risk-night: #FF8B45;
+  --font: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img, video { display: block; max-width: 100%; height: auto; }
+h1, h2, h3 { margin: 0; text-wrap: balance; }
+p { margin: 0; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; border-radius: 4px; }
+.wrap { max-width: 1120px; margin-inline: auto; padding-inline: clamp(16px, 4vw, 40px); }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+section[id] { scroll-margin-top: 64px; }
+
+/* Barra superior */
+.top {
+  position: sticky; top: 0; z-index: 10;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 56px; }
+.top__name { font-weight: 700; color: var(--teal); text-decoration: none; letter-spacing: -0.01em; }
+.top__links { display: flex; align-items: center; gap: clamp(14px, 2.4vw, 28px); font-size: 0.9375rem; }
+.top__links a { text-decoration: none; color: var(--muted); }
+.top__links a:hover { color: var(--ink); }
+.top__links .top__ext { color: var(--teal); font-weight: 600; }
+
+/* Portada */
+.hero { padding-block: clamp(40px, 7vw, 80px) clamp(44px, 6vw, 76px); }
+.hero h1 {
+  font-size: clamp(2.5rem, 6.4vw, 4.5rem);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  font-weight: 800;
+  color: var(--teal);
+}
+.hero__lead { margin-top: 20px; max-width: 58ch; font-size: clamp(1.125rem, 1.6vw, 1.3125rem); line-height: 1.5; }
+.film-wrap { margin: clamp(28px, 4vw, 44px) 0 0; display: grid; gap: 12px; }
+.film {
+  position: relative; overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 32px 60px -42px rgba(15, 76, 92, 0.5);
+}
+.film video { width: 100%; aspect-ratio: 16 / 9; background: var(--bg); }
+.film__play {
+  position: absolute; inset: 0;
+  display: flex; align-items: flex-end; justify-content: center;
+  padding: 0 0 8%;
+  border: 0; background: transparent; cursor: pointer; font: inherit;
+}
+.film__play[hidden] { display: none; }
+.film__pill {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 24px 14px 20px;
+  border-radius: 999px;
+  background: var(--teal); color: var(--surface);
+  font-weight: 600; font-size: 1rem;
+  box-shadow: 0 10px 24px -12px rgba(15, 76, 92, 0.8);
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+.film__pill svg { width: 18px; height: 18px; fill: currentColor; }
+.film__play:hover .film__pill { background: var(--ink); transform: translateY(-1px); }
+.film__play:focus-visible { outline-offset: -6px; border-radius: 16px; }
+.film-caption { font-size: 0.875rem; color: var(--muted); }
+.film--dark { background: #191919; border-color: #191919; }
+.film--dark video { background: #191919; }
+.film__play--center { align-items: center; padding: 0; }
+
+/* Empresas */
+.venture { background: var(--surface); border-top: 1px solid var(--line); }
+.venture--px { --brand: var(--px); --bar: var(--px-bar); }
+.venture--tc { --brand: var(--tc); --bar: var(--tc-bar); }
+.venture__bar { height: 10px; background: var(--bar); }
+.venture__body { padding-block: clamp(40px, 6vw, 72px); }
+.venture__head { display: flex; align-items: center; gap: 20px; }
+.venture__logo { height: 56px; width: auto; }
+.venture__years {
+  padding-left: 20px; border-left: 1px solid var(--line);
+  font-weight: 700; color: var(--brand); font-variant-numeric: tabular-nums;
+}
+.venture__intro {
+  margin-top: 28px;
+  display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: clamp(24px, 4vw, 56px); align-items: start;
+}
+.venture__intro--solo { grid-template-columns: minmax(0, 1fr); }
+.venture__text { display: grid; gap: 16px; max-width: 62ch; }
+.venture h2 { font-size: clamp(1.75rem, 3.4vw, 2.5rem); line-height: 1.1; letter-spacing: -0.03em; font-weight: 800; }
+.role { padding-left: 16px; border-left: 3px solid var(--brand); }
+.role strong { color: var(--brand); }
+
+.pitch {
+  list-style: none; margin: clamp(36px, 5vw, 56px) 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px clamp(24px, 3vw, 40px);
+}
+.pitch li { display: grid; gap: 8px; align-content: start; padding-top: 16px; border-top: 3px solid var(--brand); }
+.pitch h3 { display: flex; align-items: baseline; gap: 10px; font-size: 1.0625rem; font-weight: 700; letter-spacing: -0.01em; }
+.pitch .n { color: var(--brand); font-weight: 800; font-variant-numeric: tabular-nums; }
+.pitch p { font-size: 0.98rem; line-height: 1.55; }
+
+.shot { margin: 0; display: grid; gap: 10px; align-content: start; }
+.shot img { width: 100%; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.shot figcaption { font-size: 0.875rem; color: var(--muted); }
+.shots { margin-top: clamp(40px, 5vw, 60px); display: grid; gap: 28px; }
+.shot-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; align-items: start; }
+
+/* El riesgo de PriceX */
+.risk {
+  margin-top: clamp(44px, 6vw, 72px);
+  padding: clamp(24px, 4.5vw, 52px);
+  border-radius: 20px;
+  background: var(--night); color: var(--on-night);
+  display: grid; gap: 28px;
+}
+.risk h3 { font-size: clamp(1.625rem, 3.4vw, 2.375rem); line-height: 1.08; letter-spacing: -0.035em; font-weight: 800; color: var(--on-night-strong); }
+.risk__lead { max-width: 66ch; }
+.risk__figures {
+  display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(20px, 4vw, 48px); align-items: end;
+  padding-top: 28px; border-top: 1px solid var(--night-line);
+}
+.fig { display: grid; gap: 10px; }
+.fig__num { font-weight: 800; line-height: 1; letter-spacing: -0.045em; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.fig--gain .fig__num { font-size: clamp(2rem, 4.2vw, 2.875rem); color: var(--px-night); }
+.fig--loss .fig__num { font-size: clamp(2.5rem, 7vw, 5.25rem); color: var(--risk-night); }
+.fig__label { font-size: 0.9375rem; line-height: 1.5; color: var(--on-night-muted); max-width: 42ch; }
+.dots { display: grid; grid-template-columns: repeat(auto-fill, 9px); gap: 5px; }
+.dots i { display: block; width: 9px; height: 9px; border-radius: 2px; background: var(--px-night); }
+.dots-caption { margin-top: -10px; font-size: 0.9375rem; color: var(--on-night-muted); max-width: 72ch; }
+.dots-caption strong { color: var(--on-night-strong); font-weight: 600; }
+.legend { display: inline-block; width: 9px; height: 9px; margin-right: 6px; border-radius: 2px; background: var(--px-night); vertical-align: 0.05em; }
+.decision { padding-top: 24px; border-top: 1px solid var(--night-line); }
+.decision p { max-width: 70ch; }
+.decision strong { color: var(--on-night-strong); }
+.risk__note { font-size: 0.8125rem; color: var(--on-night-muted); }
+
+/* Tecompro */
+.columns {
+  margin-top: clamp(40px, 5vw, 60px);
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px clamp(24px, 4vw, 56px);
+}
+.columns h3 { margin-bottom: 14px; font-size: 1.25rem; font-weight: 800; letter-spacing: -0.02em; }
+.columns ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.columns li { position: relative; padding-left: 20px; }
+.columns li::before {
+  content: ""; position: absolute; left: 0; top: 0.62em;
+  width: 8px; height: 8px; border-radius: 2px; background: var(--brand);
+}
+.early { margin-top: 32px; max-width: 72ch; padding: 20px 24px; border-radius: 12px; background: var(--bg); }
+
+/* Entrevista */
+.talk { padding-block: clamp(48px, 7vw, 88px); }
+.talk__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  grid-template-areas: "film head" "film qs";
+  gap: 24px clamp(24px, 4vw, 48px);
+  align-items: start;
+}
+.talk__head { grid-area: head; display: grid; gap: 14px; }
+.talk__film { grid-area: film; margin: 0; }
+.talk__qs { grid-area: qs; }
+.talk h2 { font-size: clamp(1.75rem, 3.4vw, 2.5rem); line-height: 1.1; letter-spacing: -0.03em; font-weight: 800; color: var(--teal); }
+.talk__qtitle { margin-bottom: 6px; font-size: 1rem; font-weight: 700; }
+.talk__questions { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+.talk__questions button {
+  width: 100%;
+  display: grid; grid-template-columns: 3em minmax(0, 1fr); gap: 10px; align-items: baseline;
+  padding: 10px 12px;
+  border: 0; border-radius: 10px;
+  background: transparent; color: var(--ink);
+  font: inherit; font-size: 0.96875rem; line-height: 1.45; text-align: left;
+  cursor: pointer;
+}
+.talk__questions button:hover { background: var(--surface); }
+.talk__questions button[aria-current="true"] { background: var(--surface); box-shadow: inset 3px 0 0 var(--teal); }
+.talk__time { font-weight: 700; color: var(--teal); font-variant-numeric: tabular-nums; }
+
+/* Aprendizajes */
+.lessons { padding-block: clamp(48px, 7vw, 88px); border-top: 1px solid var(--line); }
+.lessons h2 { font-size: clamp(1.75rem, 3.4vw, 2.5rem); line-height: 1.1; letter-spacing: -0.03em; font-weight: 800; color: var(--teal); }
+.lessons__list {
+  list-style: none; margin: 32px 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px clamp(24px, 4vw, 56px);
+}
+.lessons__list li { display: grid; gap: 8px; align-content: start; padding-top: 16px; border-top: 3px solid var(--brand); }
+.lessons__list .from-px { --brand: var(--px); }
+.lessons__list .from-tc { --brand: var(--tc); }
+.lessons__from { font-size: 0.875rem; font-weight: 700; color: var(--brand); }
+.lessons__list h3 { font-size: 1.25rem; line-height: 1.3; font-weight: 700; letter-spacing: -0.015em; }
+.lessons__list p { color: var(--muted); }
+
+/* Pie */
+.foot { border-top: 1px solid var(--line); padding-block: 32px 48px; font-size: 0.9375rem; color: var(--muted); }
+.foot .wrap { display: grid; gap: 10px; }
+.foot__name { color: var(--ink); font-weight: 700; }
+.foot a { color: var(--teal); font-weight: 600; }
+.foot__note { max-width: 80ch; font-size: 0.8125rem; }
+
+@media (max-width: 860px) {
+  .venture__intro { grid-template-columns: minmax(0, 1fr); }
+  .talk__grid { grid-template-columns: minmax(0, 1fr); grid-template-areas: "head" "film" "qs"; }
+  .pitch { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .risk__figures { grid-template-columns: minmax(0, 1fr); align-items: start; }
+}
+@media (max-width: 680px) {
+  .top__links .hide-sm { display: none; }
+  .columns, .lessons__list { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 560px) {
+  body { font-size: 1rem; }
+  .pitch { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .shot-pair { grid-template-columns: minmax(0, 1fr); }
+  .film { border-radius: 12px; }
+  .film__play { padding-bottom: 3.5%; }
+  .film__pill { padding: 7px 14px 7px 11px; font-size: 0.8125rem; gap: 7px; }
+  .film__pill svg { width: 12px; height: 12px; }
+  .venture__logo { height: 46px; }
+  .dots { grid-template-columns: repeat(auto-fill, 7px); gap: 3px; }
+  .dots i { width: 7px; height: 7px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .film__pill { transition: none; }
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="top__name" href="#inicio">Juan David Pachón Moya</a>
+    <nav class="top__links" aria-label="Secciones">
+      <a class="hide-sm" href="#pricex">PriceX</a>
+      <a class="hide-sm" href="#tecompro">Tecompro</a>
+      <a class="hide-sm" href="#entrevista">Entrevista</a>
+      <a class="hide-sm" href="#aprendizajes">Qué haría distinto</a>
+      <a class="top__ext" href="https://www.linkedin.com/in/juan-david-pachon-moya-00554417b/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="wrap">
+      <h1>De PriceX a Tecompro.co</h1>
+      <p class="hero__lead">Dos emprendimientos digitales para el comercio colombiano que llevé al mercado como cofundador, entre 2018 y 2024. Aquí cuento qué problema resolvía cada uno, cómo ganaba dinero, hasta dónde llegó y por qué cerró.</p>
+      <figure class="film-wrap">
+        <div class="film">
+          <video id="pitch-video" controls playsinline preload="metadata" poster="imagenes/video-portada.jpg" width="1920" height="1080" aria-describedby="film-caption">
+            <source src="video/PriceX_Tecompro_pitch.mp4" type="video/mp4">
+            <a href="video/PriceX_Tecompro_pitch.mp4">Abrir el video</a>
+          </video>
+          <button class="film__play" id="play" type="button" hidden>
+            <span class="film__pill"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 3.8v12.4L16 10z"/></svg>Ver el video (2 min)</span>
+          </button>
+        </div>
+        <figcaption class="film-caption" id="film-caption">Recreación animada de 2 minutos, sin sonido. Los logos y las capturas de pantalla son reales.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="venture venture--px" id="pricex" aria-labelledby="pricex-title">
+    <div class="venture__bar"></div>
+    <div class="wrap venture__body">
+      <div class="venture__head">
+        <img class="venture__logo" src="imagenes/pricex-logo.png" width="260" height="160" alt="PriceX">
+        <p class="venture__years">2018–2019</p>
+      </div>
+      <div class="venture__intro">
+        <div class="venture__text">
+          <h2 id="pricex-title"><span class="sr-only">PriceX: </span>Un comparador de precios de tecnología</h2>
+          <p>Nació como mi proyecto de grado en la Universidad Sergio Arboleda, donde estudié Ingeniería Industrial con línea de profundización en economía. Era un plan de negocios en el formato del Fondo Emprender del SENA, y ese proceso empezó en la sede principal del SENA en Neiva.</p>
+          <p>Antes de construir encuestamos a 110 personas en el barrio Santa Bárbara, en Bogotá. Más del 45 % pensó primero en tecnología, con el celular a la cabeza, y el 74,5 % prefería comprar en tienda física.</p>
+          <p class="role"><strong>Mi papel.</strong> Lideré el proyecto: estudio de mercado, modelo de negocio, conversaciones con las cadenas y análisis de viabilidad. El programa que leía los precios lo desarrolló el ingeniero Rafael Suárez.</p>
+        </div>
+        <figure class="shot">
+          <img src="imagenes/pricex-inicio.jpg" width="1320" height="945" alt="Página de inicio de PriceX, con el buscador y las categorías de productos">
+          <figcaption>La página de inicio de la versión de prueba.</figcaption>
+        </figure>
+      </div>
+
+      <ol class="pitch" aria-label="PriceX en seis pasos">
+        <li><h3><span class="n">1</span>Problema</h3><p>Encontrar el mejor precio de un celular o un computador obligaba a revisar tienda por tienda, y la mayoría prefería terminar la compra en el almacén.</p></li>
+        <li><h3><span class="n">2</span>Solución</h3><p>Un buscador que leía los catálogos en línea de tres grandes cadenas, con la meta de llegar a cinco, y ordenaba los productos por precio. Mostraba la mejor oferta y llevaba al cliente a la tienda.</p></li>
+        <li><h3><span class="n">3</span>Ingresos</h3><p>Una comisión del 1 al 3 % por cada venta que llegara a la cadena desde PriceX.</p></li>
+        <li><h3><span class="n">4</span>Etapa</h3><p>Salió al mercado como versión de prueba gratuita, financiada con recursos propios. La gente la usaba para comparar los productos que le interesaban.</p></li>
+        <li><h3><span class="n">5</span>Dificultad</h3><p>Las tiendas cambiaban la estructura de sus enlaces, y el programa dejaba de leer los precios de un día para otro. Pedir acceso directo nos llevó a negociar con una gran cadena, con condiciones que no podíamos asumir.</p></li>
+        <li><h3><span class="n">6</span>Aprendizaje</h3><p>Validar el modelo con quien paga, y controla los datos, antes de construir. Y mirar el peor caso, no solo el margen.</p></li>
+      </ol>
+
+      <div class="risk">
+        <h3>Arriesgar millones para ganar miles</h3>
+        <p class="risk__lead">Para tener datos estables le pedimos acceso directo a una de las cadenas más grandes del país. Nos explicó que trabajaríamos con las reglas de un proveedor: pagos a 90 y hasta 180 días, y responsabilidad por ventas perdidas. Si nuestra integración tumbaba su tienda en línea, aunque fuera por unos minutos, pagaríamos lo que dejara de vender en todo el país durante la caída.</p>
+        <div class="risk__figures">
+          <div class="fig fig--gain">
+            <span class="fig__num">$15.000</span>
+            <span class="fig__label">Lo que ganaba PriceX al vender un artículo de $500.000, en el mejor caso (3 %).</span>
+          </div>
+          <div class="fig fig--loss">
+            <span class="fig__num">$10.000.000</span>
+            <span class="fig__label">Lo que costaba una caída de 10 minutos. La cadena vendía en línea unos $57 millones por hora, y en temporada alta mucho más.</span>
+          </div>
+        </div>
+        <div class="dots" id="dots" role="img" aria-label="670 cuadros, uno por cada venta con comisión de $15.000"></div>
+        <p class="dots-caption"><span class="legend" aria-hidden="true"></span>Cada cuadro es una venta con comisión. Hacían falta <strong>unas 670 ventas para pagar una sola caída</strong>, y una falla del programa podía tumbar las tres cadenas a la vez.</p>
+        <div class="decision"><p><strong>La decisión.</strong> Cerramos el proyecto. Solo para aguantar pagos a 90 y 180 días necesitábamos entre $78 y $156 millones en caja, con un presupuesto de unos $26 millones al mes. A la gente le gustaba la idea y la versión de prueba lo confirmaba, pero el punto de quiebre estaba en las condiciones del cliente que debía pagar, y solo apareció al negociar de verdad.</p></div>
+        <p class="risk__note">Artículo de ejemplo y cifras públicas de 2019.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="venture venture--tc" id="tecompro" aria-labelledby="tecompro-title">
+    <div class="venture__bar"></div>
+    <div class="wrap venture__body">
+      <div class="venture__head">
+        <img class="venture__logo" src="imagenes/tecompro-logo.png" width="240" height="160" alt="Tecompro.co">
+        <p class="venture__years">2019–2024</p>
+      </div>
+      <div class="venture__intro venture__intro--solo">
+        <div class="venture__text">
+          <h2 id="tecompro-title"><span class="sr-only">Tecompro.co: </span>Tiendas en línea y cobro con QR para micronegocios</h2>
+          <p>En 2019, en un evento del Fondo Emprender del SENA, me reencontré con Juan Carlos Rodríguez, amigo de infancia de Ibagué, que tenía una pequeña empresa de páginas web para emprendimientos. Le propuse unir las dos ideas y llevar la tecnología a los micronegocios. Empezamos de cero, con un nombre nuevo.</p>
+          <p class="role"><strong>Mi papel.</strong> Cofundador y responsable de producto. Propuse el modelo, definí el producto y sus flujos, e integré la pasarela de pagos, el inventario y los QR. Juan Carlos aportó la experiencia de su empresa de desarrollo web.</p>
+        </div>
+      </div>
+
+      <ol class="pitch" aria-label="Tecompro.co en seis pasos">
+        <li><h3><span class="n">1</span>Problema</h3><p>Entre comisión y descuentos del banco, un datáfono se llevaba cerca del 3 al 5 % de cada venta, además del costo del equipo. Muchos negocios pequeños preferían no recibir pagos digitales.</p></li>
+        <li><h3><span class="n">2</span>Solución</h3><p>Cada comercio tenía su página y su tienda en línea. En el local, un hablador con código QR abría el catálogo en el celular del cliente, que pagaba con ePayco, sin datáfono, y recibía en casa.</p></li>
+        <li><h3><span class="n">3</span>Ingresos</h3><p>Una suscripción de $50.000 al mes por local. Los negocios con varias sedes pagaban $30.000 por local.</p></li>
+        <li><h3><span class="n">4</span>Etapa</h3><p>Unos 30 clientes con cerca de 100 puntos de venta en Bogotá, Ibagué, Bello, el Huila y el Eje Cafetero, de comidas rápidas a ópticas, ropa y artesanías.</p></li>
+        <li><h3><span class="n">5</span>Dificultad</h3><p>Seguimos el modelo startup de la época: crecer primero y cobrar después. Visitas, comercios y productos publicados subían, pero la utilidad no. Luego llegó la pandemia.</p></li>
+        <li><h3><span class="n">6</span>Aprendizaje</h3><p>Crecer sin utilidad es coleccionar métricas de vanidad. Desde el primer día hay que medir lo que deja dinero.</p></li>
+      </ol>
+
+      <div class="shots">
+        <figure class="shot">
+          <img src="imagenes/tecompro-tienda-pinguagua.jpg" width="1600" height="732" alt="Tienda en línea de Artesanías Pinguagua en tecompro.co, con su catálogo de bolsos">
+          <figcaption>La tienda de un cliente, Artesanías Pinguagua, de Palermo (Huila), en 2021.</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="shot-pair">
+            <img src="imagenes/tecompro-pedido.jpg" width="1172" height="1028" alt="Confirmación de un pedido de prueba en la tienda">
+            <img src="imagenes/tecompro-correo.jpg" width="1043" height="920" alt="Correo automático de confirmación del pedido">
+          </div>
+          <figcaption>Un pedido de prueba, con la confirmación en la tienda y el correo automático al cliente.</figcaption>
+        </figure>
+      </div>
+
+      <div class="columns">
+        <div>
+          <h3>Decisiones de producto</h3>
+          <ul>
+            <li><strong>WordPress en lugar de desarrollo propio</strong>, para salir rápido, con poco presupuesto y un sitio independiente por comercio.</li>
+            <li><strong>ePayco como pasarela de pagos.</strong> Con la más conocida del mercado la integración se volvió lenta y difícil; ePayco nos dio acompañamiento directo.</li>
+            <li><strong>Perfiles gratuitos para crecer</strong>, con alianzas con la sede del SENA en Neiva y el programa de emprendimiento de la Universidad Sergio Arboleda.</li>
+            <li><strong>Un plan para negocios con varias sedes.</strong> Un empresario con unos 20 locales en Bello (Antioquia) llegó a ser nuestro principal ingreso.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Por qué cerró</h3>
+          <ul>
+            <li>Los clientes que pagaban cubrían los costos de operación, pero no dejaban utilidad.</li>
+            <li>El precio de entrada nunca se convirtió en un precio rentable.</li>
+            <li>La pandemia nos golpeó fuerte y no supimos aprovechar el salto que dio el comercio electrónico.</li>
+            <li>Fuerza comercial sí hubo; lo que nos faltó fue conocimiento y estrategia de negocio.</li>
+            <li>Con los años, cada socio tuvo que buscar ingresos por fuera, y en 2024 cerramos la sociedad de forma ordenada, con liquidación y reparto de activos.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="early">En 2019 casi nadie en Colombia pagaba con QR; hoy, con Bre-B y las billeteras digitales, es cotidiano. Llegamos temprano, y llegar temprano no sirve si no hay caja para esperar a que el mercado llegue.</p>
+    </div>
+  </section>
+
+  <section class="talk" id="entrevista" aria-labelledby="talk-title">
+    <div class="wrap talk__grid">
+      <div class="talk__head">
+        <h2 id="talk-title">Entrevista en la Universidad Sergio Arboleda</h2>
+        <p>Participé con Tecompro en «Transforma Sueños en Empresa», el programa de aceleración empresarial de la universidad. En 2020 el programa me entrevistó para sus redes. Son cuatro minutos, con sonido.</p>
+      </div>
+      <figure class="film-wrap talk__film">
+        <div class="film film--dark">
+          <video id="talk-video" controls playsinline preload="metadata" poster="imagenes/entrevista-portada.jpg" width="854" height="480" aria-describedby="talk-caption">
+            <source src="video/entrevista-sergio-arboleda.mp4" type="video/mp4">
+            <a href="video/entrevista-sergio-arboleda.mp4">Abrir la entrevista</a>
+          </video>
+          <button class="film__play film__play--center" type="button" hidden>
+            <span class="film__pill"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 3.8v12.4L16 10z"/></svg>Ver la entrevista (4 min)</span>
+          </button>
+        </div>
+        <figcaption class="film-caption" id="talk-caption">Video del programa de emprendimiento de la Universidad Sergio Arboleda, publicado en su Instagram (@lasergioemprende).</figcaption>
+      </figure>
+      <div class="talk__qs">
+        <h3 class="talk__qtitle">Ir a una pregunta</h3>
+        <ol class="talk__questions">
+          <li><button type="button" data-seek="21"><span class="talk__time">0:21</span><span>¿Por qué decidiste ser emprendedor?</span></button></li>
+          <li><button type="button" data-seek="49"><span class="talk__time">0:49</span><span>¿Cómo surgió la idea de crear Tecompro.co?</span></button></li>
+          <li><button type="button" data-seek="104"><span class="talk__time">1:44</span><span>¿Cuáles son tus aspiraciones con Tecompro.co?</span></button></li>
+          <li><button type="button" data-seek="151"><span class="talk__time">2:31</span><span>¿Cómo recuerdas tu experiencia en «Transforma Sueños en Empresa»?</span></button></li>
+          <li><button type="button" data-seek="202"><span class="talk__time">3:22</span><span>¿Tienes alguna recomendación para quienes quieren emprender?</span></button></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="lessons" id="aprendizajes" aria-labelledby="lessons-title">
+    <div class="wrap">
+      <h2 id="lessons-title">Qué haría distinto</h2>
+      <ul class="lessons__list">
+        <li class="from-px">
+          <span class="lessons__from">De PriceX</span>
+          <h3>Validar el modelo con el cliente que paga, y que controla los datos, antes de construir.</h3>
+          <p>En PriceX, la falla apareció en la primera negociación seria.</p>
+        </li>
+        <li class="from-tc">
+          <span class="lessons__from">De Tecompro</span>
+          <h3>Crecer sin utilidad es coleccionar métricas de vanidad.</h3>
+          <p>Desde el comienzo mediría cuánto cuesta conseguir un comercio, cuánto deja al mes, cuántos pasan de gratis a pago y cuántos se van.</p>
+        </li>
+        <li class="from-px">
+          <span class="lessons__from">De PriceX</span>
+          <h3>Mirar el peor caso, no solo el margen.</h3>
+          <p>Una comisión pequeña frente a una responsabilidad sin tope es un mal negocio, aunque el producto guste.</p>
+        </li>
+        <li class="from-tc">
+          <span class="lessons__from">De Tecompro</span>
+          <h3>Cobrar desde el primer día, aunque sea poco.</h3>
+          <p>Un comercio que no paga no demuestra que el producto vale.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p><span class="foot__name">Juan David Pachón Moya</span>. Ingeniero industrial: producto digital, procesos y analítica de datos.</p>
+    <p><a href="https://www.linkedin.com/in/juan-david-pachon-moya-00554417b/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+    <p class="foot__note">Las cifras de Tecompro son aproximadas, porque los registros de la operación no se conservaron. Los precios del video son de ejemplo, salvo los de la tienda de Pinguagua.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var dots = document.getElementById('dots');
+  if (dots) {
+    var frag = document.createDocumentFragment();
+    for (var i = 0; i < 670; i++) frag.appendChild(document.createElement('i'));
+    dots.appendChild(frag);
+  }
+
+  var videos = [];
+  function start(video) {
+    video.controls = true;
+    if (video._play) video._play.hidden = true;
+    var started = video.play();
+    if (started && typeof started.catch === 'function') {
+      started.catch(function () { if (video._play) video._play.hidden = false; });
+    }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.film'), function (film) {
+    var video = film.querySelector('video');
+    var play = film.querySelector('.film__play');
+    if (!video || !play) return;
+    video._play = play;
+    videos.push(video);
+    video.controls = false;
+    play.hidden = false;
+    play.addEventListener('click', function () { start(video); });
+    video.addEventListener('play', function () {
+      play.hidden = true;
+      videos.forEach(function (other) { if (other !== video && !other.paused) other.pause(); });
+    });
+    video.addEventListener('ended', function () {
+      video.controls = false;
+      play.hidden = false;
+    });
+  });
+
+  var talk = document.getElementById('talk-video');
+  var seekers = Array.prototype.slice.call(document.querySelectorAll('[data-seek]'));
+  if (!talk || !seekers.length) return;
+  function seekTo(t) {
+    try { talk.currentTime = t; } catch (e) {}
+    if (talk.readyState < 1) {
+      talk.addEventListener('loadedmetadata', function once() {
+        talk.removeEventListener('loadedmetadata', once);
+        try { talk.currentTime = t; } catch (e) {}
+      });
+    }
+  }
+  seekers.forEach(function (button) {
+    button.addEventListener('click', function () {
+      seekTo(Number(button.getAttribute('data-seek')));
+      start(talk);
+    });
+  });
+  talk.addEventListener('timeupdate', function () {
+    var now = talk.currentTime, current = null;
+    seekers.forEach(function (button) {
+      if (Number(button.getAttribute('data-seek')) <= now + 0.5) current = button;
+    });
+    seekers.forEach(function (button) {
+      if (button === current) button.setAttribute('aria-current', 'true');
+      else button.removeAttribute('aria-current');
+    });
+  });
+})();
+</script>
+</body>
+</html>
