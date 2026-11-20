@@ -1,7 +1,7 @@
 <p>
-  <img src="imagenes/pricex-logo.png" height="64" alt="Logo de PriceX">
+  <img src="pricex-logo.png" height="64" alt="Logo de PriceX">
   &nbsp;&nbsp;&nbsp;
-  <img src="imagenes/tecompro-logo.png" height="64" alt="Logo de Tecompro.co">
+  <img src="tecompro-logo.png" height="64" alt="Logo de Tecompro.co">
 </p>
 
 # De PriceX a Tecompro.co
@@ -34,7 +34,7 @@ La idea nació como mi proyecto de grado de Ingeniería Industrial, con línea d
 
 **Hasta dónde llegó.** Salió al mercado como versión de prueba gratuita, financiada con recursos propios. La gente la usaba para comparar los productos que le interesaban.
 
-<img src="imagenes/pricex-inicio.jpg" width="640" alt="Página de inicio de PriceX: buscador y categorías de productos">
+<img src="pricex-inicio.jpg" width="640" alt="Página de inicio de PriceX: buscador y categorías de productos">
 
 **Mi papel.** Lideré el proyecto: estudio de mercado, modelo de negocio, conversaciones con las cadenas y análisis de viabilidad. El programa de captura de precios lo desarrolló el ingeniero Rafael Suárez.
 
@@ -75,14 +75,14 @@ Y ese riesgo se multiplicaba por cada cadena que consultaba el programa: una fal
 
 Así se veía la tienda de un cliente, Artesanías Pinguagua, de Palermo (Huila), en 2021:
 
-<img src="imagenes/tecompro-tienda-pinguagua.jpg" width="820" alt="Tienda en línea de Artesanías Pinguagua en artesaniaspinguagua.tecompro.co">
+<img src="tecompro-tienda-pinguagua.jpg" width="820" alt="Tienda en línea de Artesanías Pinguagua en artesaniaspinguagua.tecompro.co">
 
 Y un pedido de prueba, con la confirmación en la tienda y el correo automático al cliente:
 
 <p>
-  <img src="imagenes/tecompro-pedido.jpg" width="400" alt="Confirmación de un pedido de prueba en la tienda">
+  <img src="tecompro-pedido.jpg" width="400" alt="Confirmación de un pedido de prueba en la tienda">
   &nbsp;
-  <img src="imagenes/tecompro-correo.jpg" width="400" alt="Correo de confirmación del pedido">
+  <img src="tecompro-correo.jpg" width="400" alt="Correo de confirmación del pedido">
 </p>
 
 **Mi papel.** Cofundador y responsable de producto. Propuse el modelo, definí el producto y sus flujos, e integré la pasarela de pagos, el inventario y los QR. Juan Carlos aportó la experiencia de su empresa de desarrollo web.
@@ -121,7 +121,7 @@ Llegamos temprano: en 2019 casi nadie en Colombia pagaba con QR, y hoy, con Bre-
 
 **Entrevista del programa (2020).** Cuatro minutos sobre por qué decidí emprender, cómo surgió Tecompro.co, qué esperaba de ella, cómo viví el programa y qué le recomiendo a quien quiere emprender. Video de la Universidad Sergio Arboleda, publicado en su Instagram (@lasergioemprende).
 
-<!-- VIDEO-ENTREVISTA: en github.com edita este archivo, borra esta línea y arrastra aquí video/entrevista-sergio-arboleda.mp4. GitHub lo sube y pone el reproductor en su lugar. -->
+<!-- VIDEO-ENTREVISTA: en github.com edita este archivo, borra esta línea y arrastra aquí entrevista-sergio-arboleda.mp4. GitHub lo sube y pone el reproductor en su lugar. -->
 
 *Las cifras de Tecompro son aproximadas: los registros de la operación no se conservaron. Los precios del video son de ejemplo, salvo los de la tienda de Pinguagua.*
 
