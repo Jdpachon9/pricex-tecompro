@@ -130,7 +130,9 @@ https://github.com/user-attachments/assets/a47a38f1-cfea-4138-8373-12db0c4233d9
 
 
 
-*Las cifras de Tecompro son aproximadas: los registros de la operación no se conservaron. Los precios del video son de ejemplo, salvo los de la tienda de Pinguagua.*
+## 6. Lo que vino después
+
+En 2026 llevé estas lecciones a [PriceX 2.0](https://github.com/Jdpachon9/pricex-2), un asistente de compras con un equipo de agentes de IA. [Así lo construí, vuelta por vuelta](https://jdpachon9.github.io/pricex-2/proceso/).
 
 ---
 
